@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0qw8mxgtplwy"]
+
+[ext_resource type="Script" uid="uid://cx4f3aceh1bsm" path="res://MatchRoom/match-room.gd" id="1_dt6tp"]
+[ext_resource type="PackedScene" path="res://Dice/dice.tscn" id="2_vksr1"]
+
+[node name="MatchRoom" type="Node2D"]
+script = ExtResource("1_dt6tp")
+
+[node name="Dice5" parent="." instance=ExtResource("2_vksr1")]
+position = Vector2(604, -1)
+scale = Vector2(0.15, 0.15)
+script = null
+
+[node name="Dice" parent="." instance=ExtResource("2_vksr1")]
+position = Vector2(620, 414)
+scale = Vector2(0.15, 0.15)
+script = null
+
+[node name="Dice2" parent="." instance=ExtResource("2_vksr1")]
+position = Vector2(95, 411)
+scale = Vector2(0.15, 0.15)
+script = null
+
+[node name="Dice3" parent="." instance=ExtResource("2_vksr1")]
+position = Vector2(140, 59)
+scale = Vector2(0.15, 0.15)
+script = null
+
+[node name="Dice4" parent="." instance=ExtResource("2_vksr1")]
+position = Vector2(777, 212)
+scale = Vector2(0.15, 0.15)
+script = null
+
+[node name="Back" type="Button" parent="."]
+offset_left = 15.0
+offset_top = 12.0
+offset_right = 60.0
+offset_bottom = 43.0
+text = "Back"
+
+[node name="RollButton" type="Button" parent="."]
+offset_left = 489.0
+offset_top = 308.0
+offset_right = 628.0
+offset_bottom = 411.0
+text = "roll"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="RollButton" to="." method="_on_button_pressed"]

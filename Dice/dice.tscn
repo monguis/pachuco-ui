@@ -1,0 +1,101 @@
+[gd_scene load_steps=9 format=3 uid="uid://blx77u64e0otn"]
+
+[ext_resource type="Script" uid="uid://cik36lfx57fix" path="res://dice.gd" id="1_y4pxb"]
+[ext_resource type="Texture2D" uid="uid://dmikhlpb8u52v" path="res://Dice/1.png" id="2_1erj6"]
+[ext_resource type="Texture2D" uid="uid://ba2rbrqoxohe7" path="res://Dice/2.png" id="3_g08j5"]
+[ext_resource type="Texture2D" uid="uid://cgee1l5oxyp4" path="res://Dice/3.png" id="4_k2puv"]
+[ext_resource type="Texture2D" uid="uid://2y5pnxuq27hf" path="res://Dice/4.png" id="5_wa5hx"]
+[ext_resource type="Texture2D" uid="uid://cfn8d0hirxk3k" path="res://Dice/5.png" id="6_60lre"]
+[ext_resource type="Texture2D" uid="uid://xoqv5gp0nsv0" path="res://Dice/6.png" id="7_e5il3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pct0i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_wa5hx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1erj6")
+}],
+"loop": true,
+"name": &"land_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_g08j5")
+}],
+"loop": true,
+"name": &"land_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_k2puv")
+}],
+"loop": true,
+"name": &"land_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_wa5hx")
+}],
+"loop": true,
+"name": &"land_4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_60lre")
+}],
+"loop": true,
+"name": &"land_5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_e5il3")
+}],
+"loop": true,
+"name": &"land_6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_e5il3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g08j5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_60lre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_k2puv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wa5hx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1erj6")
+}],
+"loop": true,
+"name": &"roll",
+"speed": 5.0
+}]
+
+[node name="Dice" type="Node2D"]
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_y4pxb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1143, 707)
+scale = Vector2(141.875, 88.125)
+sprite_frames = SubResource("SpriteFrames_pct0i")
+animation = &"roll"
